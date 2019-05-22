@@ -20,7 +20,7 @@ export default function ( reactDom, reduxState, helmetData ) {
                 <script type="text/javascript" src="/app.bundle.js"></script>
                 <script type="text/javascript" src="/runtime.bundle.js"></script>
                 <script type="text/javascript" src="/vendors.bundle.js"></script>
-                <script type="text/javascript" src="/default~app.bundle.js"></script>
+                <!--<script type="text/javascript" src="/default~app.bundle.js"></script>-->
             </body>
         </html>
     `;
