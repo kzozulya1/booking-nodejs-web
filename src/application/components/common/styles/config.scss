@@ -1,0 +1,15 @@
+$appBackgroundColor: #deeaec; 
+$headerBackgroundColor: #7dafb5; 
+$roomViewBackgroundColor: #a4c3c7;
+$textColor: #07575B;
+$websiteFont: 'PT Sans Narrow', sans-serif;
+$selectedButtonColor: #e68f53;
+$mobileMenuColor: #afcbcc;
+$firstBreakpoint: 900px;
+$containerWidth: 1100px;
+
+@mixin boxshadow{
+  -webkit-box-shadow: 2px -3px 28px 1px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    2px -3px 28px 1px rgba(50, 50, 50, 0.25);
+  box-shadow:         2px -3px 28px 1px rgba(50, 50, 50, 0.25);
+}

@@ -1,0 +1,7 @@
+{
+    "apiPrefix": "http://docker.local:830",
+    "imageServiceUpload": "http://docker.local:815/upload",
+    "imageServiceDownload": "http://docker.local:815/download",
+    "port": 888,
+    "lang": "ru"
+}

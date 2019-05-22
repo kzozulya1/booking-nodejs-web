@@ -1,0 +1,53 @@
+@import "../../common/styles/config";
+@import "../../common/styles/text_decoration";
+
+.room-view{
+    margin-bottom: 15px;
+    display:flex;
+    align-items:flex-start;
+    
+    .room-info{
+        @include text();
+
+        h2{
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        margin: 5px 15px 5px 15px;
+        background-color: #FFF;
+        display: inline-block;
+        padding: 12px;
+        width:25%;
+
+        p{
+            margin-top:10px;
+            &.owner-label{
+                font-size: larger;
+            }
+        }
+        
+        .description {
+            margin-bottom: 10px;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $firstBreakpoint){
+    .room-view{
+        flex-direction: column;
+        & > div{
+            margin: 0 0 10px 0;
+            width: 100%;
+        }
+        .room-info{
+            margin-left: 0px;
+            margin-right: 0px;
+            width: 100%;
+        }
+    }
+}

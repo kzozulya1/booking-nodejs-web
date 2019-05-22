@@ -1,0 +1,59 @@
+@import "../../common/styles/config";
+@import "../../common/styles/text_decoration";
+
+
+.new-object-form-wrapper{
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    .room{
+        display:inline-block;
+        flex-basis: 35%;
+        div{
+            text-align:left;
+        }
+        div.room-edit-post-wrapper{
+            text-align:center;
+        }
+
+        input, textarea{
+            width: 95%;
+            padding:5px;
+        }
+
+        input[type="file"]{
+            padding-left:0;
+        }
+
+        input[type="checkbox"]{
+            width: auto;
+            margin-right: 8px;
+            margin-left: 0;
+        }
+
+    }
+
+    span.empty-list{
+        display:block; /*in order to shift crete btn down*/
+        text-align:center;
+        @include text();
+    }
+
+}
+
+@media screen and (max-width: $firstBreakpoint){
+    .my-objects, .new-object-form-wrapper{
+        .room{
+            flex-basis: 100%;
+            width: 100%;
+            margin: 10px 0;
+            input, textarea{
+                width: 100%;
+            }
+        }
+    }
+    .new-object-btn-wrapper .form-field-button{
+        width:100%;
+        flex-basis: 100%;
+    }
+}

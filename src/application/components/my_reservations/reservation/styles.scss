@@ -1,0 +1,75 @@
+@import "../../common/styles/config";
+@import "../../common/styles/text_decoration";
+
+.reservation{
+    margin: 5px 10px 20px 10px;
+    background-color: #FFF;
+    flex-basis: 25%;
+    padding: 12px;
+
+    .head{
+        margin-bottom: 10px;
+    }
+
+    span{
+        @include text();
+    }
+
+    .remove{
+        margin-left:10px;
+        cursor:pointer;
+        &:after{
+            content: url(images/close_red.png);
+        }
+
+        position: relative;
+        display: inline-block;
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: $headerBackgroundColor;
+            color: #000;
+            text-align: center;
+            border-radius: 2px;
+            padding: 5px 0;
+
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 105%;
+        }
+    }
+
+    .remove:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    .reservation-view-more-wrapper{
+        position:relative;
+        .room-info{
+            @include boxshadow();
+            z-index: 999;
+            position: absolute;
+            border-radius: 5px;
+            top: 35px;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            .room{
+                margin:0;
+                background-color: $roomViewBackgroundColor;
+            }
+        }
+
+        .room-info-hide{
+            display:none;
+        }
+    }
+}
+
+@media screen and (max-width: $firstBreakpoint){
+    .reservation{
+        flex-basis: 100%;
+    }
+}

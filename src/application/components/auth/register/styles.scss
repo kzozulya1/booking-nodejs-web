@@ -1,0 +1,42 @@
+@import "../../common/styles/config";
+@import "../../common/styles/text_decoration";
+
+.auth-register-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.auth-register{
+    background-color:#FFF;
+    padding: 26px;
+    margin-top:25px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    
+    h3 { font-size: 22px; @include text(); }
+    h2 { font-size: 15px; text-align: center; margin: 5px 0 15px 0; @include text();}
+    
+    #register-btn{
+        background-color:$headerBackgroundColor; 
+        padding: 2px;
+        
+        @include text();
+        margin-top: 20px;
+        height: 40px;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        cursor: pointer;
+    }
+    
+    #registration-error{
+        color: red;
+        text-align: center;
+        margin-top:7px;
+        font-size:small;
+    }
+}

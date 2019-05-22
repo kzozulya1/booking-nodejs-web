@@ -1,0 +1,32 @@
+@import "../common/styles/config";
+@import "../common/styles/text_decoration";
+
+.auth a{
+  margin: 10px;
+}
+.auth ul>li {
+  display:inline;
+}
+
+.auth .hidden{
+      display:none;
+}
+
+.auth .user-name span{
+  @include text();   
+  color: $textColor;
+  font-size: large;
+  font-weight: bold;
+}
+
+/*For screen smaller then 900px*/
+@media  screen and (max-width: $firstBreakpoint){
+  .auth{
+    float:right;
+    margin-top: -7px;
+    margin-right: 0;
+    a{
+      margin: 0 0 0 10px;
+    }
+  }
+}

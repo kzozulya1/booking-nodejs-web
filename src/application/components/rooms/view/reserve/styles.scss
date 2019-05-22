@@ -1,0 +1,55 @@
+@import "../../../common/styles/config";
+@import "../../../common/styles/text_decoration";
+
+.room-reservation{
+    @include text();
+
+    .check-in-date{
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .check-out-date{
+        display: inline-block;
+        margin-left: 70px;
+    }
+
+    .day-picker-red-border{
+        border: solid red 1px;
+    }
+
+    .notes{
+        .label{
+            margin-top: 15px;
+        }
+        textarea{
+            @include text();
+            font-size:large;
+            margin-top:8px;
+            width:99%;
+            resize:none;
+        }
+    }
+
+    .picker{
+        background-color: $appBackgroundColor;
+        display: inline-block;
+        padding:4px;
+        margin:8px;
+    }
+
+
+    margin: 5px 0 0 30px;
+    background-color: #FFF;
+    display: inline-block;
+    padding: 12px;
+}
+
+@media screen and (max-width: $firstBreakpoint){
+    .room-reservation{
+        width: 255px;
+        .check-out-date{
+            margin-left: 0px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "../common/styles/config";
+@import "../common/styles/text_decoration";
+
+p{
+    @include text();
+}
+
+.all-reservations{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+

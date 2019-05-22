@@ -1,0 +1,124 @@
+@import "../../common/styles/config";
+@import "../../common/styles/text_decoration";
+
+/*MIXINS*/
+@mixin control-styling($imagePath) {
+    margin-left:8px;
+    margin-right:8px;
+
+    cursor:pointer;
+    &:after{
+        content: url($imagePath);
+    }
+    position: relative;
+    display: inline-block;
+}
+
+@mixin tooltiptext-styling() {
+    visibility: hidden;
+    width: 120px;
+    background-color: $headerBackgroundColor;
+    color: #000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+@mixin font-in-edit-controls() {
+    @include text();
+    font-size:medium;
+}
+
+
+/*MAIN STYLES*/
+.room{
+    margin: 5px 10px 20px 10px;
+    background-color: #FFF;
+    flex-basis: 20%;
+    padding: 12px;
+
+    input{
+        @include font-in-edit-controls();
+        margin-bottom: 5px;
+    }
+    textarea{
+        @include font-in-edit-controls();
+        resize: none;
+    }
+
+    select{
+        @include font-in-edit-controls();
+        margin:3px;
+    }
+
+    span, p{
+        @include text();
+        line-height: 20px;
+    }
+
+    h3{
+        @include text();
+        font-size: large;
+        margin-bottom: 15px;
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+    .description span{
+        font-weight: bold;
+
+    }
+
+    .controls-wrapper{
+        display:inline-block;
+    }
+
+    /*Edit and remove controls wrapper*/
+    .edit-remove-controls{
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    /*Remove control*/
+    .room-remove{
+        @include control-styling("images/close_red.png")
+        .tooltiptext {
+            @include tooltiptext-styling()
+        }
+    }
+    /*Edit control*/
+    .room-edit{
+        @include control-styling("images/edit_icon.png")
+        .tooltiptext {
+            @include tooltiptext-styling()
+        }
+    }
+    /*Edit control*/
+    .room-edit-post-wrapper{
+        text-align:center;
+    }
+
+    .room-edit-post{
+        @include control-styling("images/ok.png")
+        .tooltiptext {
+            @include tooltiptext-styling()
+        }
+    }
+    .room-go-back{
+        @include control-styling("images/back.png")
+        .tooltiptext {
+            @include tooltiptext-styling()
+        }
+    }
+}
+
+@media screen and (max-width: $firstBreakpoint){
+    .room{
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+}

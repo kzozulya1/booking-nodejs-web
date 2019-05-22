@@ -1,0 +1,45 @@
+@import "../styles/config";
+@import "../styles/text_decoration";
+
+.last-alert-box{
+    background-color: #FFF;
+    width:30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    border: solid #000 1px;
+    padding:15px;
+    text-align: center;
+
+    @include boxshadow();
+    p{
+        text-align:center;
+        @include text();
+        font-weight:bold;
+        &.error{
+            color: red;
+        }
+        &.success{
+            color: $textColor;
+        }
+    }
+    
+    .OKbtn{
+        margin-top:20px;
+        width: 33%;
+        height: 33px;
+    }
+}
+
+.hidden-box{
+    display:none;
+}
+
+@media  screen and (max-width: $firstBreakpoint){
+    .last-alert-box{
+        width:85%;
+    }
+}

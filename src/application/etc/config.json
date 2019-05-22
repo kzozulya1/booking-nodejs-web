@@ -1,0 +1,7 @@
+{
+    "apiPrefix": "http://python_api_service:830",
+    "imageServiceUpload": "http://golang_images_service:815/upload",
+    "imageServiceDownload": "http://golang_images_service:815/download",
+    "port": 88,
+    "lang": "ru"
+}

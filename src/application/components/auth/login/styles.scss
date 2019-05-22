@@ -1,0 +1,35 @@
+@import "../../common/styles/config";
+@import "../../common/styles/text_decoration";
+
+.auth-login-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.auth-login{
+    background-color:#FFF;
+    padding: 26px;
+    margin-top:25px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    
+    h3 { font-size: 22px; @include text(); text-align:center;}
+    h2 { font-size: 15px; text-align: center; margin-bottom: 15px; @include text();}
+    
+    #login-btn{
+        background-color:$headerBackgroundColor; 
+        padding: 2px;
+        
+        @include text();
+        margin-top: 20px;
+        height: 40px;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        cursor: pointer;
+    }
+}

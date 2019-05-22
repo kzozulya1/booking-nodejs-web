@@ -1,0 +1,20 @@
+@import "../../styles/config";
+@import "../../styles/text_decoration";
+
+.form-field-button{
+    background-color:$headerBackgroundColor;
+    padding: 2px;
+    @include text();
+    color:black;
+    margin-top: 20px;
+    height: 40px;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.form-field-button-selected{
+  background-color:$selectedButtonColor;
+}

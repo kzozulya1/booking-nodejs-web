@@ -1,0 +1,22 @@
+@import "../../styles/config";
+@import "../../styles/text_decoration";
+
+.border-red-color{
+    border: solid red 1px;
+}
+
+.form-text-component {
+    .error{
+        @include text();
+        color: red;
+        font-size:small;
+        padding:3px;
+    }
+    
+    input{
+        display: block;
+        padding: 5px;
+        margin-top:7px;
+        font-size: medium;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../common/styles/config";
+@import "../common/styles/text_decoration";
+
+.all-rooms{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+}
+
+.guest-warning{
+    text-align:center;
+    margin-bottom: 10px;
+    span{
+        @include text();
+    }
+}

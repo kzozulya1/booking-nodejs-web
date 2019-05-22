@@ -1,0 +1,56 @@
+@import "../../styles/config";
+@import "../../styles/text_decoration";
+
+.border-red-color{
+    border: solid red 1px;
+}
+
+.form-image-component {
+    input[type="file"]{
+        padding: 0px;
+        font-size: small;
+    }
+
+    .img-label{
+        width: 85px;
+        display: inline-block;
+        padding-right:3px;
+    }
+
+    .img-preview-placeholder{
+        display: inline-block;
+        width: 37px;
+        
+    }
+
+    .control{
+        padding-bottom: 20px;
+        /*position: relative;*/
+
+        input[type="file"]{
+            width: auto;
+        }
+
+        .progress-bar{
+            margin: 0 10px 0 10px;
+        }
+
+
+        img{
+            /*border: unset;*/
+            float: left;
+            margin-right: 10px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .delete-option{
+            display: inline-block;
+            /*position: absolute;
+            left: 32px;
+            bottom: -3px;
+            white-space: nowrap;*/
+        }
+
+    }
+}

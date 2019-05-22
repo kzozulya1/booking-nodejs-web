@@ -1,0 +1,25 @@
+@import "../common/styles/config";
+@import "../common/styles/text_decoration";
+
+.logo{
+    a, a:hover{
+        text-decoration: none;
+    }
+
+    &:before{  content: url(images/house_logo.png);  }
+   .main{
+       font-size: 3em;
+       @include text();
+   }
+   .suffix{
+       font-size: 25px;
+       @include text();
+       color: #000;
+   }
+}
+
+@media  screen and (max-width: $firstBreakpoint){
+  .logo{
+    display:none;
+  }
+}

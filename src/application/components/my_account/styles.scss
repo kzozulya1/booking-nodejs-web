@@ -1,0 +1,29 @@
+@import "../common/styles/config";
+@import "../common/styles/text_decoration";
+
+.my-account-wrapper{
+    text-align:center;
+}
+
+.my-account{
+    background-color:#FFF;
+    padding: 25px;
+    margin: 0 auto;
+    display:inline-block;
+
+    h3 { font-size: 22px; @include text(); text-align:center;}
+
+    .change-pwd{
+        text-align:left;
+        input[type="checkbox"]{
+            margin-left:0;
+        }
+    }
+
+    .email{
+        @include text();
+        text-align:left;
+        font-weight:bold;
+        margin: 6px 0 10px 0;
+    }
+}
