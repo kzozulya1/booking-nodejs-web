@@ -889,7 +889,7 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
 /*! exports provided: apiPrefix, imageServiceUpload, imageServiceDownload, port, lang, default */
 /***/ (function(module) {
 
-eval("module.exports = {\"apiPrefix\":\"http://python_api_service:830\",\"imageServiceUpload\":\"http://golang_images_service:815/upload\",\"imageServiceDownload\":\"http://golang_images_service:815/download\",\"port\":88,\"lang\":\"ru\"};\n\n//# sourceURL=webpack:///./application/etc/config.json?");
+eval("module.exports = {\"apiPrefix\":\"http://docker.local:830\",\"imageServiceUpload\":\"http://docker.local:815/upload\",\"imageServiceDownload\":\"http://docker.local:815/download\",\"port\":88,\"lang\":\"ru\"};\n\n//# sourceURL=webpack:///./application/etc/config.json?");
 
 /***/ }),
 
