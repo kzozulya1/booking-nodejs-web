@@ -87,7 +87,7 @@ class AuthRegisterComponent extends Component {
                 </Helmet>
                 <div className="auth-register">
                     <h3>First time on Lucky Booking?</h3>
-                    <h2>At once registration</h2>
+                    <h2>At once website registration</h2>
                     <FormTextComponent key="name_txt" objectKey="name" onUpdateCallback={this.updateStateKey}  defaultValue={this.state.name || ''}  type="text" validationRule="noEmpty" failMsg='Please type your name' ref="name"placeholder="Your name" />
                     <FormTextComponent key="login_txt" objectKey="login" onUpdateCallback={this.updateStateKey}  defaultValue={this.state.login || ''}  type="text" validationRule="email" failMsg='Please type correct email' ref="email" placeholder="Your email" />
                     <FormTextComponent key="password_txt" objectKey="password" onUpdateCallback={this.updateStateKey} type="password" validationRule="noEmpty" failMsg='Please type your password' ref="password" placeholder="Password"/>
