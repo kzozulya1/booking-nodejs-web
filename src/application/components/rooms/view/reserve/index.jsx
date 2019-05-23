@@ -113,7 +113,12 @@ class RoomReserveComponent extends Component {
     _formatDateForApi(date){
         let pregSplit = /[\.\/]/;
         let dateArray = date.toLocaleDateString().split(pregSplit);
-        return dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0] + ' 00:00:00'
+        if (date.toLocaleDateString().match(/\//)){
+            //nginx container : year - day - month
+            return dateArray[2] + '-' + dateArray[0] + '-' + dateArray[1] + ' 00:00:00'
+        }else{
+            return dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0] + ' 00:00:00'
+        }
     }
 
     /*
