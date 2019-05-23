@@ -22,16 +22,7 @@ class MyReservationsComponent extends Component {
     *  Render component
     */
     render(){
-        //console.log(this.props.loggedinUser.reservations)
         let hasReservations =  this.props.loggedinUser.reservations && this.props.loggedinUser.reservations.length
-        
-        // if (!this.props.loggedinUser.reservations || !this.props.loggedinUser.reservations.length)
-        //     return (
-        //         <div className="page-title">
-        //             <h3>You have no any reservations at the moment</h3>
-        //         </div>
-        //     );
-            
         if (hasReservations){
             var reservations = this.props.loggedinUser.reservations.map(aReservation => {
                 aReservation.created_at = dateConvert(aReservation.created_at)

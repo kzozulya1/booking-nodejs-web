@@ -111,6 +111,8 @@ class RoomReserveComponent extends Component {
      * Prepare correct date format for API
      */
     _formatDateForApi(date){
+        console.log("Date is " + date.toLocaleDateString())
+        
         let dateArray = date.toLocaleDateString().split('.');
         return dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0] + ' 00:00:00'
     }
