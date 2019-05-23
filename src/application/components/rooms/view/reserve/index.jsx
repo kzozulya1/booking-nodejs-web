@@ -80,7 +80,7 @@ class RoomReserveComponent extends Component {
             error.push("Check out date must be greater than now");
         }
         if (dateFrom >= dateTo ){
-            error.push("Check out date must be greater than Check-in date")
+            error.push("Check out date must be greater than check in date")
         }
         if (!this.state.date_from){
             this.refs.dayfrompickerwrapper.classList.add('day-picker-red-border');
@@ -111,9 +111,8 @@ class RoomReserveComponent extends Component {
      * Prepare correct date format for API
      */
     _formatDateForApi(date){
-        console.log("Date is " + date.toLocaleDateString())
-        
-        let dateArray = date.toLocaleDateString().split('.');
+        let pregSplit = /[\.\/]/;
+        let dateArray = date.toLocaleDateString().split(pregSplit);
         return dateArray[2] + '-' + dateArray[1] + '-' + dateArray[0] + ' 00:00:00'
     }
 
