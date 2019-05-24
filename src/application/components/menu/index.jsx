@@ -61,7 +61,7 @@ class MenuComponent extends Component {
                     {this.props.userToken &&
                      <ul>
                         <li className='rooms'>
-                          <NavLink onClick={this.onMobileMenuItemClick} activeClassName='selectedMenu' to={ROOMS_ROUTE}>{'All Apartments!'}</NavLink>
+                          <NavLink onClick={this.onMobileMenuItemClick} activeClassName='selectedMenu' to={ROOMS_ROUTE}>{'All Apartments'}</NavLink>
                         </li>
                         <li className={'account' + (this.props.userToken ? '' : ' hidden')} >
                             <NavLink onClick={this.onMobileMenuItemClick} activeClassName='selectedMenu' to={MY_ACCOUNT_ROUTE}>{'My Account'}</NavLink>
