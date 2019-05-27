@@ -889,7 +889,7 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
 /*! exports provided: apiPrefix, imageServiceUpload, imageServiceDownload, port, lang, default */
 /***/ (function(module) {
 
-eval("module.exports = {\"apiPrefix\":\"http://95.181.178.240:830\",\"imageServiceUpload\":\"http://95.181.178.240:815/upload\",\"imageServiceDownload\":\"http://95.181.178.240:815/download\",\"port\":88,\"lang\":\"ru\"};\n\n//# sourceURL=webpack:///./application/etc/config.json?");
+eval("module.exports = {\"apiPrefix\":\"http://www.luckybooking.site:830\",\"imageServiceUpload\":\"http://www.luckybooking.site:815/upload\",\"imageServiceDownload\":\"http://www.luckybooking.site:815/download\",\"port\":88,\"lang\":\"ru\"};\n\n//# sourceURL=webpack:///./application/etc/config.json?");
 
 /***/ }),
 

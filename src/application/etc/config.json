@@ -1,7 +1,7 @@
 {
-    "apiPrefix": "http://95.181.178.240:830", 
-    "imageServiceUpload": "http://95.181.178.240:815/upload",
-    "imageServiceDownload": "http://95.181.178.240:815/download",
+    "apiPrefix": "http://www.luckybooking.site:830",  
+    "imageServiceUpload": "http://www.luckybooking.site:815/upload",
+    "imageServiceDownload": "http://www.luckybooking.site:815/download",
     "port": 88,
     "lang": "ru"
 }
