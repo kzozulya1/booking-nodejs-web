@@ -51,11 +51,12 @@ class MenuComponent extends Component {
         return (
 
             <div className="menuWrapper">
-                <div onClick={this.onTogglerClick} className={'mobileToggler' + (this.state.menuVisibility ? ' active' : '')}>
+                {this.props.userToken && <div onClick={this.onTogglerClick} className={'mobileToggler' + (this.state.menuVisibility ? ' active' : '')}>
                     <span />
                     <span />
                     <span />
                 </div>
+                }
 
                 <div className={'menu' + (this.state.menuVisibility ? ' active' : '')}>
                     {this.props.userToken &&
