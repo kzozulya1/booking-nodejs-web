@@ -103,9 +103,9 @@ class RoomComponent extends Component {
                 img_2: this.state.img2,
                 img_3: this.state.img3,
                 body_capacity: this.state.body_capacity,
-                allow_smoking: this.state.allow_smoking ? 1 : 0,
-                allow_parking: this.state.allow_parking ? 1 : 0,
-                allow_children:this.state.allow_children ? 1 : 0
+                allow_smoking: this.state.allow_smoking ? true : false,
+                allow_parking: this.state.allow_parking ? true : false,
+                allow_children:this.state.allow_children ? true : false
             };
 
             //Create new room
