@@ -73,6 +73,14 @@ class RoomReserveComponent extends Component {
         
         var error=[];
 
+        if (dateFrom  == "Invalid Date"){
+            error.push("Check in date must be selected")
+        }
+
+        if (dateTo  == "Invalid Date"){
+            error.push("Check out date must be selected")
+        }
+        
         if (dateFrom < now){
             error.push("Check in date must be greater than now")
         }
@@ -95,7 +103,7 @@ class RoomReserveComponent extends Component {
             let postData = {
                 book_from: this._formatDateForApi(dateFrom),
                 book_to: this._formatDateForApi(dateTo),
-                notes: wishes /*this.refs.notes.value*/
+                notes: wishes
             }
 
             this.props.createReservationAction(this.props.room_id,this.props.userToken, postData)

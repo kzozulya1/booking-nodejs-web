@@ -1,6 +1,6 @@
 import { USER_REGISTER,USER_LOGOUT,USER_LOGIN,ALERT_UPDATE, USERDATA_UPDATE, USERDATA_CLEAR,ROOMS_GET_NEXT_BATCH } from '../actions/ActionType'
 import api from '../api';
-import {applyDateFormatting} from '../helper/date_convert';
+//import {applyDateFormatting} from '../helper/date_convert';
 import {JWT_LOCAL_STORAGE_KEY} from '../etc/const';
 
 /**
@@ -11,7 +11,9 @@ function _getMeDataAction(dispatch, token){
     api.me(token).then(
         ({data})=> {
             //Convert date 2019-01-22T00:00:00 to 22.01.2019
-            applyDateFormatting(data)
+            //console.log("apply date formatting")
+            //applyDateFormatting(data)
+            //console.log("do dispatch!")
 
             dispatch({
                 type: USERDATA_UPDATE,
@@ -94,7 +96,8 @@ export const loginAction = (userData) => {
     return function (dispatch) {
         return api.loginUser(userData).then(
             ({data})=> {
-                //Store token at session
+
+                //Store token at session  
                 localStorage.setItem(JWT_LOCAL_STORAGE_KEY, data.jwt_token);
                 //Set store value userToken to gotten token
                 dispatch({

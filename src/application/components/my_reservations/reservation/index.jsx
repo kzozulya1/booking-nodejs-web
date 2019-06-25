@@ -71,22 +71,22 @@ class ReservationComponent extends Component {
     render(){
         return (
                 <div className="reservation">
-                    <div className="head">
+                    <div className="head row">
                         <span>Created at: <span className="emphasized">{this.props.data.created_at}</span></span>
                             <span onClick={this.onRemoveClick} className="remove">
                                 <span className="tooltiptext">Cancel your reservation</span>
                             </span>
                     </div>
 
-                    <div className="from">
+                    <div className="from row">
                         <span>Book from: <span className="emphasized">{this.props.data.book_from}</span></span>
                     </div>
 
-                    <div className="from">
+                    <div className="from row">
                         <span>Book to: <span className="emphasized">{this.props.data.book_to}</span></span>
                     </div>
 
-                    <div className="notes">
+                    <div className="notes row">
                         { this.props.data.notes &&
                        <span>Your wishes: <span className="emphasized">{this.props.data.notes}</span></span>
                         }

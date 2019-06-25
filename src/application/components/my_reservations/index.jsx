@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux'
 import './styles.scss';
 import ReservationComponent from "./reservation"
-import {dateConvert, applyDateFormatting} from '../../helper/date_convert';
+//import {dateConvert, applyDateFormatting} from '../../helper/date_convert';
 import Helmet from "react-helmet";
 
 class MyReservationsComponent extends Component {
@@ -23,14 +23,15 @@ class MyReservationsComponent extends Component {
     */
     render(){
         let hasReservations =  this.props.loggedinUser.reservations && this.props.loggedinUser.reservations.length
-        if (hasReservations){
-            var reservations = this.props.loggedinUser.reservations.map(aReservation => {
-                aReservation.created_at = dateConvert(aReservation.created_at)
-                aReservation.book_from = dateConvert(aReservation.book_from)
-                aReservation.book_to = dateConvert(aReservation.book_to)
-                return aReservation
-            })
-        }
+        var reservations = this.props.loggedinUser.reservations
+        // if (hasReservations){
+        //     var reservations = this.props.loggedinUser.reservations.map(aReservation => {
+        //         aReservation.created_at = dateConvert(aReservation.created_at)
+        //         aReservation.book_from = dateConvert(aReservation.book_from)
+        //         aReservation.book_to = dateConvert(aReservation.book_to)
+        //         return aReservation
+        //     })
+        // }
             
         return (
             <div className="reservations-wrapper">

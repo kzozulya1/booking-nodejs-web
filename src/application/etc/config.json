@@ -1,5 +1,5 @@
 {
-    "apiPrefix": "http://www.luckybooking.site:830",  
+    "apiPrefix": "http://www.luckybooking.site:831",  
     "imageServiceUpload": "http://www.luckybooking.site:815/upload",
     "imageServiceDownload": "http://www.luckybooking.site:815/download",
     "port": 88,
